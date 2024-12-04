@@ -2,9 +2,9 @@
   <div id="app">
     <el-container>
       <el-header>
-        <h1>Мое Vue Приложение</h1>
+        <Header />
       </el-header>
-      <el-main>
+      <el-main class="main-content">
         <router-view></router-view>
       </el-main>
     </el-container>
@@ -13,7 +13,20 @@
 
 <script>
 /* eslint-disable */
+import Header from './components/Header.vue';
+
 export default {
   name: 'App',
+  components: {
+    Header,
+  }
 };
 </script>
+
+<style>
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>

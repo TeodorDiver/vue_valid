@@ -1,5 +1,5 @@
 <template>
-  <el-form :model="formData" :rules="rules" ref="formRef" label-width="120px">
+<el-form :model="formData" :rules="rules" ref="formRef" label-width="120px">
     <el-form-item label="Имя" prop="name">
       <el-input v-model="formData.name"></el-input>
     </el-form-item>
@@ -65,3 +65,9 @@ export default {
   },
 };
 </script>
+<style>
+.el-form {
+  width: 500px;
+  margin: auto;
+}
+</style>
