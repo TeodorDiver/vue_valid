@@ -1,14 +1,14 @@
 <template>
 <el-form :model="formData" :rules="rules" ref="formRef" label-width="120px">
     <el-form-item :label="$t('form.labels.name')"  prop="name">
-      <el-input v-model="formData.name"></el-input>
+      <el-input data-test="login" v-model="formData.name"></el-input>
     </el-form-item>
     <el-form-item :label="$t('form.labels.email')" prop="email">
-      <el-input v-model="formData.email"></el-input>
+      <el-input data-test="email" v-model="formData.email"></el-input>
     </el-form-item>
     <el-form-item>
-      <el-button type="primary" @click="submitForm">{{ $t('form.buttons.submit') }}</el-button>
-      <el-button @click="resetForm">{{ $t('form.buttons.reset') }}</el-button>
+      <el-button data-test="submit" type="primary" @click="submitForm">{{ $t('form.buttons.submit') }}</el-button>
+      <el-button data-test="reset" @click="resetForm">{{ $t('form.buttons.reset') }}</el-button>
     </el-form-item>
   </el-form>
 </template>
